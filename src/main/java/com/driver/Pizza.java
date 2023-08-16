@@ -83,15 +83,18 @@ public class Pizza {
         if (cheeseAdded){
             bill+="Extra Cheese Added: 80\n";
         }
-        if(toppingAdded){
+        if(toppingAdded && isVeg){
             bill+="Extra Toppings Added: 70\n";
+        }
+        else{
+            bill+="Extra Toppings Added: 120\n";
         }
         if (bagAdded){
             bill+="Paperbag Added: 20\n";
         }
         bill+="Total Price: "+price+"\n";
+            billGenerated=true;
         }
-        billGenerated=true;
         return this.bill;
     }
 }
