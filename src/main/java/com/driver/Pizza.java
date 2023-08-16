@@ -90,7 +90,7 @@ public class Pizza {
         // your code goes here
         if(!takeAway) {
             this.price += 20;
-            this.bill += "Paperbag Added: 20\n";
+            this.bill += "Paper bag Added: 20\n";
             this.takeAway=true;
         }
     }
