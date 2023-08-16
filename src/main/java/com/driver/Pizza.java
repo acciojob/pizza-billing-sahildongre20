@@ -10,11 +10,11 @@ public class Pizza {
     final private int cheesePrice=80;
     final private int bagPrice=20;
     private int toppingPrice;
-
     //boolean attributes
     private boolean cheeseAdded;
     private boolean toppingAdded;
     private boolean bagAdded;
+    private boolean billGenerated;
 
 
 
@@ -73,6 +73,7 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
+        if(billGenerated){
         if(isVeg){
             bill+="Base Price Of The Pizza: 300\n";
         }
@@ -89,6 +90,8 @@ public class Pizza {
             bill+="Paperbag Added: 20\n";
         }
         bill+="Total Price: "+price+"\n";
+        }
+        billGenerated=true;
         return this.bill;
     }
 }
